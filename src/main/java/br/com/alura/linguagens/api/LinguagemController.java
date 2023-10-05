@@ -33,6 +33,11 @@ public class LinguagemController {
     return repository.findAll();
   }
 
+  @GetMapping("/home")
+  public String Home(){
+    return "Olá Mundo";
+  }
+
   @PostMapping("/languages")
   public Linguagem postLanguage(@RequestBody Linguagem languageData){
     Linguagem saveLanguage = repository.save(languageData);
